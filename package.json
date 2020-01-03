@@ -1,0 +1,12 @@
+{
+  "name": "logger-to-memory",
+  "version": "1.0.0",
+  "description": "Logger to memory",
+  "license": "MIT",
+  "repository": "raulcalvo/logger-to-memory",
+  "main": "index.js",
+  "keywords": [
+    "logger",
+    "memory"
+  ]
+}

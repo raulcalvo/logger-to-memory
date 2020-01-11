@@ -8,5 +8,10 @@
   "keywords": [
     "logger",
     "memory"
-  ]
+  ],
+  "dependencies": {
+    "config-loader-manager": "^1.0.1",
+    "merge-json": "0.1.0-b.3",
+    "path": "^0.12.7"
+  }
 }

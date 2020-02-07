@@ -1,10 +1,11 @@
 'use strict';
-const requirer = require("../extended-requirer/index.js");
+const requirer = require("extended-requirer");
 const r = new requirer(__dirname);
 
-const path = r.require('path');
-const fs = r.require('fs');
-const mergeJSON = r.require('merge-json');
+const path = require('path');
+const fs = require('fs');
+const mergeJSON = require('merge-json');
+
 const configLoader = r.require('config-loader-manager');
 
 function getModuleName(){
@@ -22,13 +23,12 @@ module.exports = class logger {
             "firstLogLine" : "raulcalvo/logger-to-memory logs:"
         };
         this._config = configLoader.load(__dirname, config, defaultConfig);
-
-        this._log = [this.getConfig("firstLogLine") + this.getConfig("lineSeparator")];
+        this._log = [ this.getConfig("firstLogLine")];
         this._logNumber = 0;
     }
 
     getConfig(key){
-        return this._config[__dirname.split(path.sep).slice(-1)[0]][key];
+        return this._config[getModuleName()][key];
     }
     log(out) {
         if (!this.getConfig("logsEnabled"))

@@ -1,16 +1,20 @@
 {
   "name": "logger-to-memory",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Logger to memory",
   "license": "MIT",
   "repository": "raulcalvo/logger-to-memory",
   "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
   "keywords": [
     "logger",
     "memory"
   ],
   "dependencies": {
     "config-loader-manager": "^1.0.1",
+    "extended-requirer": "^1.0.2",
     "merge-json": "0.1.0-b.3",
     "path": "^0.12.7"
   }
